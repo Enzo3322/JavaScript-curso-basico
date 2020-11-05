@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+     <title>Condiçõespt1 ESD</title>
+</head>
+    <style>
+        body{
+            color: white;
+            background-color: rgb(85, 18, 18);
+            font: normal 25px arial;
+            align-items: center;
+         text-align: center;
+         align-items: center;
+         justify-content: center;
+     }
+     input{
+         color: rgb(2, 6, 248);  
+         font: normal 18px arial;
+     }
+     h1{
+         text-align: center;
+         align-items: center;
+         justify-content: center;
+     }
+</style>
+    <body>
+        <h1>Sistema de multas</h1>
+             Velocidade do carro: <input type="number" name="vel1" id="vel1"> Km/h
+        <input type="button" value="verificar" onclick="calcular()">
+        <div id="res">
+        
+        </div>
+<script>
+    function calcular(){
+        var vel1 = window.document.querySelector('input#vel1')
+        var res = window.document.querySelector('div#res')
+        var vel = Number(vel1.value)
+        res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> km/h`
+            if(vel > 85){
+                res.innerHTML += `<p>Você foi <strong>MULTADO</strong> por excesso de velocidade</p>`
+            }else{
+                
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança </p>`
+            }
+    
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>enzospag</title>
+  </head>
+ <style>
+     body{color:white;
+     background-color: rgb(22, 174, 201);
+     font: normal 25px arial;
+     
+       align-items: center;
+       text-align: center;
+       justify-content: center;
+     }
+     
+     h1{
+       align-items: center;
+       text-align: center;
+       justify-content: center;
+     }
+     p{
+       align-items: center;
+       text-align: center;
+       justify-content: center;
+     }
+ </style>
+  <body>
+    <h1>Descubra sua estatura.</h1>
+    <p>Basta inserir sua altura no campo de preenchimento abixo.</p>
+    Altura: <input type="number" name="altura" id="alt">m.
+    <input type="button" value="Calcular" onclick="xuxa()">
+  </body>
+  <div id="res">
+
+  </div>
+  <script>
+    function xuxa() {
+      var altura = window.document.querySelector('input#alt').value
+      var res = window.document.querySelector('div#res')
+      res.innerHTML = `Você tem ${altura} m.\n<br/>`
+      if (altura < 1.69) {
+        res.innerHTML += 'A sua estatura é considerada baixa'
+      } else if (altura > 1.85 ) {
+        res.innerHTML += 'A sua estatura é considerada alta'
+      } else {
+        res.innerHTML += 'A sua estatura é considerada média'
+      }
+    }
+
+</script>
+</html>
