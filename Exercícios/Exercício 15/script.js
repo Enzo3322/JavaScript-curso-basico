@@ -11,7 +11,7 @@ function verificar() {
         var gênero = ''
         var img = document.createElement('img')
         if (fsex[0].checked){
-            gênero = "Masculino"
+            gênero = "Homem"
             if (idade >=0 && idade <= 1){
                 img.src = 'feto.jpg'
             }
@@ -36,7 +36,7 @@ function verificar() {
             }
         
         }else if (fsex[1].checked) {
-            gênero = 'Feminino'
+            gênero = 'Mulher'
             if (idade >=0 && idade <= 1){
                 img.src = 'feto.jpg'
             }
@@ -61,7 +61,7 @@ function verificar() {
             }
         }
         res.style.textAlign = 'center'
-        res.innerHTML = `Você é do sexo ${gênero} e tem ${idade} anos.`
+        res.innerHTML = `Você é ${gênero} e tem ${idade} anos.`
         res.appendChild(img)
     }
 }
